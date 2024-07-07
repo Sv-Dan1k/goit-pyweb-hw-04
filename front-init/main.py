@@ -11,10 +11,10 @@ STATIC_DIR = os.path.join(os.path.dirname(__file__), 'static')
 STORAGE_DIR = "storage"
 STORAGE_FILE = os.path.join(STORAGE_DIR, "data.json")
 
-# Створюємо директорію для зберігання файлу, якщо вона не існує
+
 os.makedirs(STORAGE_DIR, exist_ok=True)
 
-# Ініціалізація файлу, якщо він не існує
+
 if not os.path.exists(STORAGE_FILE):
     with open(STORAGE_FILE, 'w') as f:
         json.dump({}, f)
